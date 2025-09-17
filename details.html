@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rice Classifier – Project Details</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #e8f5e9, #d0f0c0, #f1f8e9, #c8e6c9);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            position: relative;
+        }
+
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+
+        details {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        details:hover {
+            background-color: #eef4fb;
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.2s;
+        }
+
+        .badge:hover {
+            transform: scale(1.1);
+            background-color: #0056b3;
+        }
+
+        .team-card {
+            background: #f3f6fa;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .team-card:hover {
+            background: #e6eefb;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a:hover {
+            background: #0056b3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Rice Grain Classifier – Project Details</h1>
+
+        <details open>
+            <summary>📌 Project Overview</summary>
+            <p>This AI-powered web app classifies rice grain images into five varieties using a MobileNetV2-based deep learning model deployed via Flask.</p>
+        </details>
+
+        <details>
+            <summary>🌾 Supported Rice Types</summary>
+            <ul>
+                <li>Basmati</li>
+                <li>Jasmine</li>
+                <li>Arborio</li>
+                <li>Ipsala</li>
+                <li>Karacadag</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>⚙️ Technologies Used</summary>
+            <div class="badge-container">
+                <div class="badge">Python</div>
+                <div class="badge">TensorFlow</div>
+                <div class="badge">Keras</div>
+                <div class="badge">MobileNetV2</div>
+                <div class="badge">Flask</div>
+                <div class="badge">HTML5</div>
+                <div class="badge">CSS3</div>
+                <div class="badge">JavaScript</div>
+                <div class="badge">Jupyter Notebook</div>
+                <div class="badge">Git & GitHub</div>
+            </div>
+        </details>
+
+        <details>
+            <summary>👥 Team Contributions</summary>
+
+            <div class="team-card">
+                <strong>Dwarakeshwar S:</strong> Led model development using MobileNetV2, handled transfer learning, preprocessing pipeline, and integrated the trained model into Flask. Also assisted in debugging and deployment readiness.
+            </div>
+
+            <div class="team-card">
+                <strong>Gaddam Vijay Kumar:</strong> Designed and implemented the frontend using HTML, CSS, and ensured a responsive and clean UI. Contributed to integrating frontend with Flask routes and supported testing of the user interface.
+            </div>
+
+            <div class="team-card">
+                <strong>Rachagarla Mahesh Adithya:</strong> Managed Flask route setup, file handling logic, and overall project structure. Took charge of documentation, test case validation, and preparing the final demo presentation.
+            </div>
+        </details>
+
+
+        <a href="/">← Back to Classifier</a>
+    </div>
+
+    <!-- Include particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 80 },
+          "color": { "value": "#007bff" },
+          "shape": { "type": "circle" },
+          "opacity": {
+            "value": 0.2,
+            "random": true
+          },
+          "size": {
+            "value": 3,
+            "random": true
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#007bff",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            }
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 0.4
+              }
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    </script>
+
+</body>
+</html>
